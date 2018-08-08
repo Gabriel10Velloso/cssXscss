@@ -31,7 +31,7 @@
     padding: .6em;
     font-size: 1.2em;
     @include borda-arredondada(2em);
-    @include sombra-padrao();
+    @extend %sombra-padrao; //place holder
     font-weight: bold;
   }
 

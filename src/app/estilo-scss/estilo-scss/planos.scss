@@ -62,7 +62,7 @@
     height: 38px;
     font-size: 1.2em;
     @include borda-arredondada();
-    @include sombra-padrao();
+    @extend %sombra-padrao; //place holder
     margin-left: 2em;
   }
   

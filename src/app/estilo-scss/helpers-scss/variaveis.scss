@@ -2,8 +2,6 @@
 $cor-padrao: darken(#c24e4b, 10);
 $cor-branca: #fff; 
 $cor-auxiliar: #1e2c35;
-// $ponto-de-quebra: 980px;
-// $mobile: "(max-width: $ponto-de-quebra)";
 
 $tamanho-fonte-html: 16;
 
@@ -11,18 +9,28 @@ $tamanho-fonte-html: 16;
 @mixin borda-arredondada($raio-borda: 0.3em) {
   -webkit-border-radius: $raio-borda;
   -ms-border-radius: $raio-borda;
+  -moz-border-radius: $raio-borda;
   -o-border-radius: $raio-borda;
   border-radius: $raio-borda;
 }
 
-@mixin sombra-padrao() {
-  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
-  -ms-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
-}
+// @mixin sombra-padrao() {
+//   -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+//   -ms-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+//   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+// }
 
 @mixin image-replacement() {
   text-indent: -9999px;
   overflow: hidden;
   background-repeat: repeat;
+}
+
+// deixa o css mais rápido usando o place holder ....     @extend %sombra-padrao; //place holder
+%sombra-padrao {
+  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3); 
 }
